@@ -1,6 +1,4 @@
-## This function will cache the matrix if it is already cached. 
-## will save in another workspace or scope the matrix
-
+## This function will return the matrix inverse if it is already cached.
 makeCacheMatrix <- function(matrixx = matrix()) {
         
         #clean the variable
@@ -13,6 +11,7 @@ makeCacheMatrix <- function(matrixx = matrix()) {
                 inverseMatrix <<- NULL
         }
         
+        #return the matrix
         getMatrix <- function(){
                 matrixx
         }
@@ -36,8 +35,7 @@ makeCacheMatrix <- function(matrixx = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## Calculates the inverse of matrix if it is not cached. Otherwise will return the cached result
 cacheSolve <- function(matrix, ...) {
         
         # get the cached inverse..if any
